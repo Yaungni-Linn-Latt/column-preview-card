@@ -8,6 +8,9 @@ body{
 
 /* Main box */
 @media (min-width:768px){
+  body{
+    overflow-y:hidden:
+  }
 .grid-box{
   display: grid;
   grid-auto-columns: 1fr;
