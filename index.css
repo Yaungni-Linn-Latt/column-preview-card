@@ -1,0 +1,132 @@
+body{
+  font-size: 15px;
+  background-color: hsl(0, 0%, 95%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Main box */
+@media (min-width:768px){
+  body{
+      overflow-y: hidden;
+  }
+.grid-box{
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+  'sedans suvs luxury'
+  'footer footer footer';
+  width: 62%;
+}
+}
+@media (max-width:1024px) and (min-width:768px)  {
+  .grid-box{
+    width: 90%;
+  }
+}
+@media (max-width:767px)   {
+  .grid-box{
+    margin-block: 23%;
+    margin-inline: 5%;
+  }
+}
+
+.sedans,.suvs,.luxury{
+  padding-block:15%;
+  padding-inline: 12%;
+}
+
+@media (min-width:768px) {
+  /* sedans */
+  .sedans{
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+  }
+  /* luxury */
+  .luxury{
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+
+}
+@media (max-width:767px) {
+  .sedans{
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  }
+
+  /* luxury */
+  .luxury{
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+  }
+}
+/* sedans */
+.sedans{
+  grid-area: sedans;
+  background-color: hsl(31, 77%, 52%);
+}
+/* suvs */
+.suvs{
+  grid-area: suvs;
+    background-color: hsl(184, 100%, 22%);
+}
+
+/* luxury */
+.luxury{
+  grid-area: luxury;
+  background-color: hsl(179, 100%, 13%);
+}
+
+/* boxes inside of each grid box */
+
+.type{
+  margin-block: 6%;
+  font-family: 'Big Shoulders Display', cursive;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 95%)
+}
+.info,.learn-btn{
+  font-family: 'Lexend Deca', sans-serif;
+}
+.info{
+  display: block;
+  width: 90%;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+@media (min-width:760px){
+  .info{
+    margin-bottom: 40%;
+  }
+}
+.learn-btn{
+  color: hsl(0, 0%, 95%);
+  background-color: transparent;
+  border-radius: 30px;
+  padding: 1em 1.7em;
+  border: 2px  solid hsl(0, 0%, 95%);
+  transition: background-color 450ms, color 450ms;
+
+}
+.learn-btn:hover{
+  background-color: hsl(0, 0%, 95%);
+  cursor: pointer;
+}
+.sedans .learn-btn:hover{
+  color:   hsl(31, 77%, 52%);
+}
+.suvs .learn-btn:hover{
+  color:   hsl(184, 100%, 22%);
+}
+.luxury .learn-btn:hover{
+  color:  hsl(179, 100%, 13%);
+}
+
+
+/* Developer */
+.attribution{
+ grid-area: footer;
+ margin-top: 10%;
+}
